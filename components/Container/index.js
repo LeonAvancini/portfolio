@@ -3,7 +3,7 @@ import Navbar from "../Navbar";
 import Info from "../Info";
 
 const ContainerStyled = styled.div`
-  border: 1px solid blue;
+  background: #e5e5e5;
   display: flex;
   justify-content: space-between;
   height: 100vh;
@@ -16,14 +16,21 @@ const Content = styled.div`
   flex-direction: column;
   align-items: center;
   margin: 0px 30px;
-  border: 1px solid orange;
+`;
+const InitialContent = styled.div`
+  background: #ffffff;
+  height: 467px;
+  width: 970px;
 `;
 
 export const Container = ({ children }) => {
   return (
     <ContainerStyled>
       <Info />
-      <Content>{children}</Content>
+      <Content>
+        <InitialContent>contenido</InitialContent>
+        {children}
+      </Content>
       <Navbar />
     </ContainerStyled>
   );

@@ -1,10 +1,13 @@
 import Link from "next/link";
 import styled from "styled-components";
-import HomeIcon from "../Container/icons/HomeIcon";
+import HomeIcon from "../icons/HomeIcon";
+import PortfolioIcon from "../icons/PortfolioIcon";
+import ServicesIcon from "../icons/ServicesIcon";
 import IconButton from "../IconButton";
+import CvIcon from "../icons/CvIcon";
 
 const NavBarStyled = styled.div`
-  border: 1px solid red;
+  background: white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,10 +31,25 @@ export const Navbar = () => {
         </LinkStyled>
       </Link>
       <Link href="/contact">
-        <LinkStyled>Contacto</LinkStyled>
+        <LinkStyled>
+          <IconButton>
+            <PortfolioIcon />
+          </IconButton>
+        </LinkStyled>
       </Link>
       <Link href="/projects">
-        <LinkStyled>Proyectos</LinkStyled>
+        <LinkStyled>
+          <IconButton>
+            <ServicesIcon />
+          </IconButton>
+        </LinkStyled>
+      </Link>
+      <Link href="/projects">
+        <LinkStyled>
+          <IconButton>
+            <CvIcon />
+          </IconButton>
+        </LinkStyled>
       </Link>
     </NavBarStyled>
   );

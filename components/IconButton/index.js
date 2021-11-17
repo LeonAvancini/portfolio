@@ -5,12 +5,12 @@ const ButtonStyled = styled.button`
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: lightblue;
+  background: #ffb40091;
   transition: all 0.2s ease-out;
 
   &:hover {
     transition: all 0.2s ease-in;
-    background: blue;
+    background: #ffb400;
   }
 `;
 

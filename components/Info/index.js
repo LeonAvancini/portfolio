@@ -2,7 +2,7 @@ import Link from "next/link";
 import styled from "styled-components";
 
 const InfoContainer = styled.div`
-  border: 1px solid red;
+  background: white;
   display: flex;
   flex-direction: column;
   align-items: center;
