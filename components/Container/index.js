@@ -1,6 +1,9 @@
 import styled from "styled-components";
+import Head from "next/head";
+import Link from "next/link";
 import Navbar from "../Navbar";
 import Info from "../Info";
+import InitialContent from "../InitialContent";
 
 const ContainerStyled = styled.div`
   background: #e5e5e5;
@@ -17,22 +20,27 @@ const Content = styled.div`
   align-items: center;
   margin: 0px 30px;
 `;
-const InitialContent = styled.div`
-  background: #ffffff;
-  height: 467px;
-  width: 970px;
-`;
 
 export const Container = ({ children }) => {
   return (
-    <ContainerStyled>
-      <Info />
-      <Content>
-        <InitialContent>contenido</InitialContent>
-        {children}
-      </Content>
-      <Navbar />
-    </ContainerStyled>
+    <>
+      <Head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
+          rel="stylesheet"
+        />
+      </Head>
+      <ContainerStyled>
+        <Info />
+        <Content>
+          <InitialContent />
+          {children}
+        </Content>
+        <Navbar />
+      </ContainerStyled>
+    </>
   );
 };
 

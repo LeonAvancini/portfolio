@@ -5,7 +5,7 @@ const ButtonStyled = styled.button`
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: #ffb40091;
+  background: #e4e6eb;
   transition: all 0.2s ease-out;
 
   &:hover {
@@ -15,9 +15,7 @@ const ButtonStyled = styled.button`
 `;
 
 export const IconButton = ({ children, onClickHandler }) => {
-  return (
-    <ButtonStyled onClick={() => console.log("test")}>{children}</ButtonStyled>
-  );
+  return <ButtonStyled>{children}</ButtonStyled>;
 };
 
 export default IconButton;
