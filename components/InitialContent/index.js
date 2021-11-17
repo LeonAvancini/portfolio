@@ -3,15 +3,16 @@ import styled from "styled-components";
 const Container = styled.div`
   display: flex;
   align-items: flex-end;
+  justify-content: space-between;
   background: #ffffff;
   height: 467px;
   width: 100%;
-  //   padding: 60px;
   max-width: 970px;
 `;
 
 const ImageContainer = styled.div`
   display: flex;
+  justify-content: flex-end;
   flex-grow: 1;
 `;
 
@@ -21,21 +22,24 @@ const TextContainer = styled.div`
   flex-direction: ${({ column }) => (column ? "column" : "row")};
   flex-grow: 2;
   margin: auto 40px;
+  max-width: 500px;
 `;
 
 const H1Styled = styled.h1`
-  margin: 2px;
+  margin: 1px;
   color: ${({ color }) => color ?? "#000000"};
   white-space: pre;
-  font-size: 52px;
+  font-size: 50px;
   font-weight: bold;
   font-family: "Righteous", cursive;
 `;
 
-const PStyled = styled.p`
+const PStyled = styled.div`
+  margin-top: 30px;
+  max-width: 424px;
   color: #767676;
   font-size: 16px;
-  text-align: left;
+  text-align: justify;
 `;
 
 export const InitialContent = () => {
@@ -53,7 +57,7 @@ export const InitialContent = () => {
         </PStyled>
       </TextContainer>
       <ImageContainer>
-        <img src="https://picsum.photos/300/300" alt="test" />
+        <img src="https://picsum.photos/390" alt="test" />
       </ImageContainer>
     </Container>
   );

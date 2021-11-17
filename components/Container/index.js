@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Head from "next/head";
-import Link from "next/link";
+import Section from "../Section";
 import Navbar from "../Navbar";
 import Info from "../Info";
 import InitialContent from "../InitialContent";
@@ -26,7 +26,11 @@ export const Container = ({ children }) => {
     <>
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin=""
+        />
         <link
           href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
           rel="stylesheet"
@@ -36,7 +40,7 @@ export const Container = ({ children }) => {
         <Info />
         <Content>
           <InitialContent />
-          {children}
+          <Section>{children}</Section>
         </Content>
         <Navbar />
       </ContainerStyled>
