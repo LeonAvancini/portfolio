@@ -14,7 +14,7 @@ const ButtonStyled = styled.button`
   }
 `;
 
-export const IconButton = ({ children, onClickHandler }) => {
+export const IconButton = ({ children }) => {
   return <ButtonStyled>{children}</ButtonStyled>;
 };
 

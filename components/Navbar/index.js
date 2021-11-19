@@ -12,7 +12,7 @@ const NavBarStyled = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  height: 100%;
+  height: 100vh;
   width: 108px;
   padding: 50px 34px;
 `;

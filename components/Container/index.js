@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import Head from "next/head";
-import Section from "../Section";
 import Navbar from "../Navbar";
 import Info from "../Info";
 import InitialContent from "../InitialContent";
@@ -9,8 +8,9 @@ const ContainerStyled = styled.div`
   background: #e5e5e5;
   display: flex;
   justify-content: space-between;
-  height: 100vh;
+  height: 100%;
   width: 100%;
+  padding-bottom: 40px;
 `;
 
 const Content = styled.div`
@@ -26,13 +26,9 @@ export const Container = ({ children }) => {
     <>
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
         <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin=""
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Righteous&family=Shippori+Antique&display=swap"
           rel="stylesheet"
         />
       </Head>
@@ -40,7 +36,7 @@ export const Container = ({ children }) => {
         <Info />
         <Content>
           <InitialContent />
-          <Section>{children}</Section>
+          {children}
         </Content>
         <Navbar />
       </ContainerStyled>
